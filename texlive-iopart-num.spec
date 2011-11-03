@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /biblio/bibtex/contrib/iopart-num
+# catalog-date 2009-01-27 15:17:42 +0100
+# catalog-license lppl
+# catalog-version 2.1
 Name:		texlive-iopart-num
 Version:	2.1
 Release:	1
@@ -41,6 +47,7 @@ journals, including Journal of Physics.
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.bib
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.pdf
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ journals, including Journal of Physics.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

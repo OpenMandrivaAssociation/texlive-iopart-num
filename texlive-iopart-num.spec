@@ -17,28 +17,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A BibTeX style providing numeric citation in Harvard-like
 format. Intended for use with Institute of Physics (IOP)
 journals, including Journal of Physics.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -48,7 +38,6 @@ journals, including Journal of Physics.
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.bib
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.pdf
 %doc %{_texmfdistdir}/doc/bibtex/iopart-num/iopart-num.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,5 +48,3 @@ journals, including Journal of Physics.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

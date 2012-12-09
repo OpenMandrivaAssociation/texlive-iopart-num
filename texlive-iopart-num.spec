@@ -48,3 +48,17 @@ journals, including Journal of Physics.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.1-2
++ Revision: 752805
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.1-1
++ Revision: 718732
+- texlive-iopart-num
+- texlive-iopart-num
+- texlive-iopart-num
+- texlive-iopart-num
+

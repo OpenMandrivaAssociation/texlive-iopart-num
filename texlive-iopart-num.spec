@@ -6,7 +6,7 @@
 # catalog-version 2.1
 Name:		texlive-iopart-num
 Version:	2.1
-Release:	4
+Release:	5
 Summary:	Numeric citation style for IOP journals
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/iopart-num

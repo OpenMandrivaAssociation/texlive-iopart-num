@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Numeric citation style for IOP journals
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/iopart-num
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/iopart-num
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iopart-num.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/iopart-num.doc.r%{version}.tar.xz
